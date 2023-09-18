@@ -58,7 +58,7 @@ class BasicUNet(nn.Module):
 def corrupt(xs, amount):
     noise = torch.rand(xs.shape, dtype=torch.double)
     amount = amount.view(-1, 1) 
-    return xs * (1-amount) + noise * amount
+    return noise #xs * (1-amount) + noise * amount
 
 
 
